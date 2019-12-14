@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &366907386
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 366907387}
-  m_Layer: 0
-  m_Name: EnemyPos (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &366907387
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366907386}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.33, y: 4.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8855554918424100245}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &612833881
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 612833882}
   m_Layer: 0
-  m_Name: EnemyPos (3)
+  m_Name: EnemyPos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,11 +24,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612833881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42, y: 4.56, z: 0}
+  m_LocalPosition: {x: 0.02, y: 4.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8855554918424100245}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &944310653
 GameObject:
@@ -100,7 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1103341067}
   m_Layer: 0
-  m_Name: EnemyPos (5)
+  m_Name: EnemyPos4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,12 +83,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103341066}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.2, y: 4.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8855554918424100245}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1585574959
 GameObject:
@@ -130,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1585574960}
   m_Layer: 0
-  m_Name: EnemyPos (1)
+  m_Name: EnemyPos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,13 +114,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585574959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.46, y: 4.56, z: 0}
+  m_LocalPosition: {x: -1.24, y: 4.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8855554918424100245}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2052966662
+--- !u!1 &1933845692
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,27 +128,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2052966663}
+  - component: {fileID: 1933845693}
   m_Layer: 0
-  m_Name: EnemyPos (2)
+  m_Name: EnemyPos3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2052966663
+--- !u!4 &1933845693
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052966662}
+  m_GameObject: {fileID: 1933845692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.76, y: 4.56, z: 0}
+  m_LocalPosition: {x: 1.33, y: 4.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8855554918424100245}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1089361603409752102
 GameObject:
@@ -210,9 +180,8 @@ Transform:
   m_Children:
   - {fileID: 944310654}
   - {fileID: 1585574960}
-  - {fileID: 2052966663}
   - {fileID: 612833882}
-  - {fileID: 366907387}
+  - {fileID: 1933845693}
   - {fileID: 1103341067}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -232,9 +201,8 @@ MonoBehaviour:
   enemyPopPos:
   - {fileID: 944310654}
   - {fileID: 1585574960}
-  - {fileID: 2052966663}
   - {fileID: 612833882}
-  - {fileID: 366907387}
+  - {fileID: 1933845693}
   - {fileID: 1103341067}
   enemyType: 3
   enemyType1List:
@@ -246,3 +214,4 @@ MonoBehaviour:
   enemyType3List:
   - {fileID: 3878838166079918585, guid: a468ff1002df1c4409ffbf1fe0690b0b, type: 3}
   - {fileID: 3878838166079918585, guid: 82d504468bf829b4a9f7079d61336ea3, type: 3}
+  enemyPopTime: 3.5

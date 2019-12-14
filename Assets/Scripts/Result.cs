@@ -9,6 +9,9 @@ public class Result : MonoBehaviour
     [SerializeField]
     private SceneObject nextScene;
 
+      [SerializeField]
+    private SceneObject titleScene;
+
     private int resultScore = 0;
 
     public List<GameObject> ResultImageList;
@@ -21,21 +24,17 @@ public class Result : MonoBehaviour
         //背景の変更
         if(resultScore >= 10000)
         {
-            ResultImageList[5].SetActive(true);
-        }
-        else if(resultScore >= 8000)
-        {
             ResultImageList[4].SetActive(true);
         }
-        else if(resultScore >= 6000)
+        else if(resultScore >= 7000)
         {
              ResultImageList[3].SetActive(true);
         }
-        else if(resultScore >= 4000)
+        else if(resultScore >= 5000)
         {
              ResultImageList[2].SetActive(true);
         }
-        else if(resultScore >= 2000)
+        else if(resultScore >= 3000)
         {
              ResultImageList[1].SetActive(true);
         }
@@ -49,5 +48,10 @@ public class Result : MonoBehaviour
     public void ToNext()
     {
         SceneManager.LoadScene( nextScene );
+    }
+
+     public void ToTitle()
+    {
+        SceneManager.LoadScene( titleScene );
     }
 }

@@ -350,6 +350,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6670562328913591350, guid: d7e1692d1981aad4aa1d9612625f9b58,
+        type: 3}
+      propertyPath: enemyPopTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8855554918424100245, guid: d7e1692d1981aad4aa1d9612625f9b58,
         type: 3}
       propertyPath: m_LocalPosition.x

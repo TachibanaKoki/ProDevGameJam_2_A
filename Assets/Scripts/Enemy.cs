@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
 
         if(eventflag == 0)
         {
-            if(eventTime >= 3.0f)
+            if(eventTime >= 1.5f)
             {
                 moveEnemy();
                 eventflag = 1;
@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
 
         if(eventflag == 0)
         {
-            if(eventTime >= 2.5f)
+            if(eventTime >= 1.5f)
             {
                 moveEnemy();
                 eventflag = 1;
@@ -74,7 +74,7 @@ public class Enemy : MonoBehaviour
         }
         else if(eventflag == 1)
         {
-            if(eventTime >= 0.6f)
+            if(eventTime >= 0.8f)
             {
                 moveEnemy(true);
                 eventflag = 2;

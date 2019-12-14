@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5819889168033642430}
   - component: {fileID: 5819889168033642429}
   - component: {fileID: 5713534156479795009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
