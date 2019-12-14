@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
 	GameObject _PlayerObject;
 
 	[SerializeField]
+	SpriteRenderer _Start;
+	[SerializeField]
+	Sprite _Kanoke;
+
+	[SerializeField]
 	float _Speed = 20.0f;
 
 	float _WidthEnd = 2.5f;
@@ -16,11 +21,27 @@ public class Player : MonoBehaviour
 
 	bool _IsPlay = false;
 
+
 	private void Start()
 	{
 		_IsPlay = false;
 		GameManager._OnGameStart += OnGameStart;
 		GameManager._OnGameEnd += OnGameEnd;
+		_PlayerObject.SetActive(false);
+		DOVirtual.DelayedCall(1.0f, () => {
+			_Start.transform.DOMoveY(-4.5f,1.0f).OnComplete(()=> 
+			{
+				DOVirtual.DelayedCall(0.5f,()=> {
+					_Start.sprite = _Kanoke;
+					_PlayerObject.SetActive(true);
+					DOVirtual.DelayedCall(0.5f, () =>
+					{
+						_Start.transform.DOMoveY(-6.0f, 1.0f);
+					});
+					});
+			});
+		});
+
 	}
 
 	void Update()
@@ -82,6 +103,14 @@ public class Player : MonoBehaviour
 		if (isclear)
 		{
 			_PlayerObject.transform.DOMoveY(10, 1.0f);
+		}
+		else if(_PlayerObject!=null)
+		{
+			var renderers =  _PlayerObject.GetComponentsInChildren<SpriteRenderer>();
+			foreach(var obj in renderers)
+			{
+				obj.DOFade(0,1.0f);
+			}
 		}
 		_IsPlay = false;
 	}
