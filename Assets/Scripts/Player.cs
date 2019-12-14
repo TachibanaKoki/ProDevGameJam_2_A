@@ -24,34 +24,31 @@ public class Player : MonoBehaviour
 	}
 
 	void Update()
-    {
+	{
 		if (false == _IsPlay) return;
 
-#if UNITY_ANDROID
-		
-#endif
-		if(Input.GetMouseButton(0))
+		if (Input.GetMouseButton(0))
 		{
-			if(Input.mousePosition.x < Screen.width*0.4f)
+			if (Input.mousePosition.x < Screen.width * 0.4f)
 			{
 				MoveLeft();
 			}
-			else if(Input.mousePosition.x> Screen.width -(Screen.width*0.4f))
+			else if (Input.mousePosition.x > Screen.width - (Screen.width * 0.4f))
 			{
 				MoveRight();
 			}
 		}
 
-		if(Input.GetKey(KeyCode.RightArrow))
+		if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
 		{
 			MoveRight();
 		}
-		 if(Input.GetKey(KeyCode.LeftArrow))
+		if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
 		{
 			MoveLeft();
 		}
 
-    }
+	}
 
 	private void MoveRight()
 	{
@@ -82,10 +79,9 @@ public class Player : MonoBehaviour
 
 	private void OnGameEnd(bool isclear)
 	{
-
-		if(isclear)
+		if (isclear)
 		{
-			_PlayerObject.transform.DOMoveY(10,1.0f);
+			_PlayerObject.transform.DOMoveY(10, 1.0f);
 		}
 		_IsPlay = false;
 	}
