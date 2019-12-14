@@ -94,7 +94,7 @@ public class EnamyManager : MonoBehaviour
             }
             if(_posNO2 == _posNO)
             {
-                if(_posNO2 == 5)
+                if(_posNO2 == 4)
                 {
                     _posNO2 = 0;
                 }
