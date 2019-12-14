@@ -28,7 +28,7 @@ public class EnamyManager : MonoBehaviour
     
         while (true) {
             yield return null;
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(2.5f);
             CreateEnemy();
         }
     }
