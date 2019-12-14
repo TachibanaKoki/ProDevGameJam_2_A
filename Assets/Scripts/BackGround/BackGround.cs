@@ -34,8 +34,8 @@ public class BackGround : MonoBehaviour
 		Color col = _Gradient.Evaluate(GameParam._CurrentTime / GameParam._PlayTime);
 		_Image.color = col;
 
-		col = col + Color.gray;
-		renderers[0].color = col;
-		renderers[1].color = col;
+		//col = col + Color.gray;
+		//renderers[0].color = col;
+		//renderers[1].color = col;
 	}
 }
