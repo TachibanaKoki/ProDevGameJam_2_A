@@ -27,28 +27,53 @@ public class Player : MonoBehaviour
     {
 		if (false == _IsPlay) return;
 
-        if(Input.GetKey(KeyCode.RightArrow))
+#if UNITY_ANDROID
+		
+#endif
+		if(Input.GetMouseButton(0))
 		{
-			_PlayerObject.transform.Translate(new Vector3(_Speed*Time.deltaTime,0,0));
-
-			if(_PlayerObject.transform.localPosition.x> _WidthEnd)
+			if(Input.mousePosition.x < Screen.width*0.4f)
 			{
-				Vector3 pos = _PlayerObject.transform.localPosition;
-				_PlayerObject.transform.localPosition = new Vector3(_WidthEnd, pos.y,pos.z);
+				MoveLeft();
 			}
+			else if(Input.mousePosition.x> Screen.width -(Screen.width*0.4f))
+			{
+				MoveRight();
+			}
+		}
+
+		if(Input.GetKey(KeyCode.RightArrow))
+		{
+			MoveRight();
 		}
 		 if(Input.GetKey(KeyCode.LeftArrow))
 		{
-			_PlayerObject.transform.Translate(new Vector3(-_Speed * Time.deltaTime, 0, 0));
-
-			if (_PlayerObject.transform.localPosition.x < -_WidthEnd)
-			{
-				Vector3 pos = _PlayerObject.transform.localPosition;
-				_PlayerObject.transform.localPosition = new Vector3(-_WidthEnd, pos.y, pos.z);
-			}
+			MoveLeft();
 		}
 
     }
+
+	private void MoveRight()
+	{
+		_PlayerObject.transform.Translate(new Vector3(_Speed * Time.deltaTime, 0, 0));
+
+		if (_PlayerObject.transform.localPosition.x > _WidthEnd)
+		{
+			Vector3 pos = _PlayerObject.transform.localPosition;
+			_PlayerObject.transform.localPosition = new Vector3(_WidthEnd, pos.y, pos.z);
+		}
+	}
+
+	private void MoveLeft()
+	{
+		_PlayerObject.transform.Translate(new Vector3(-_Speed * Time.deltaTime, 0, 0));
+
+		if (_PlayerObject.transform.localPosition.x < -_WidthEnd)
+		{
+			Vector3 pos = _PlayerObject.transform.localPosition;
+			_PlayerObject.transform.localPosition = new Vector3(-_WidthEnd, pos.y, pos.z);
+		}
+	}
 
 	private void OnGameStart()
 	{

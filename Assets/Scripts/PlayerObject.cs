@@ -8,6 +8,7 @@ public class PlayerObject : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "Enemy")
 		{
+			SoundManager.PlaySE("tin1");
 			GameManager._Instance.End();
 		}
 	}
