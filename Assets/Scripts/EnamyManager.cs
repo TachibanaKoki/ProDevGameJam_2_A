@@ -41,6 +41,15 @@ public class EnamyManager : MonoBehaviour
     }
     void CreateEnemy()
     {
+        if(Score.m_Score <= 100)
+        {
+            return;
+        }
+        if(Score.m_Score >= 9999)
+        {
+            return;
+        }
+
         int _posNO = Random.Range(0,enemyPopPos.Count);
         int _EnemyNo = Random.Range(0,enemyType);
 
