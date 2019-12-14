@@ -1,5 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!58 &2483824718785656413
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878838166079918585}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.30137268, y: 0.026206225}
+  serializedVersion: 2
+  m_Radius: 1.3367313
+--- !u!68 &3430012425618890926
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878838166079918585}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.7466694, y: 0.6027442}
+  - {x: 0.87770075, y: 0.943426}
+  - {x: 1.4453824, y: 0.54282874}
+  - {x: 1.6327696, y: -0.051543713}
+  - {x: 1.389143, y: -0.57653844}
+  - {x: 1.4677618, y: -0.44550687}
 --- !u!1001 &6321884600877202208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15,7 +53,7 @@ PrefabInstance:
     - target: {fileID: 7093097181567026810, guid: 867f950b8d33439478c654202adc1795,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.27
       objectReference: {fileID: 0}
     - target: {fileID: 7093097181567026810, guid: 867f950b8d33439478c654202adc1795,
         type: 3}
@@ -65,27 +103,39 @@ PrefabInstance:
     - target: {fileID: 7093097182163102425, guid: 867f950b8d33439478c654202adc1795,
         type: 3}
       propertyPath: m_Name
-      value: enemy3 Variant
+      value: enemy3
       objectReference: {fileID: 0}
     - target: {fileID: 7093097182163102426, guid: 867f950b8d33439478c654202adc1795,
         type: 3}
-      propertyPath: m_Color.r
-      value: 0.75321573
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d925d3837b07d84c9781b1db24104cf,
+        type: 3}
+    - target: {fileID: 7093097182163102426, guid: 867f950b8d33439478c654202adc1795,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.25
       objectReference: {fileID: 0}
     - target: {fileID: 7093097182163102426, guid: 867f950b8d33439478c654202adc1795,
         type: 3}
-      propertyPath: m_Color.g
-      value: 0.043137252
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093097182163102426, guid: 867f950b8d33439478c654202adc1795,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
+      propertyPath: m_Size.y
+      value: 2.49
       objectReference: {fileID: 0}
     - target: {fileID: 9070624693079511588, guid: 867f950b8d33439478c654202adc1795,
         type: 3}
       propertyPath: enemyLevel
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9070624693079511588, guid: 867f950b8d33439478c654202adc1795,
+        type: 3}
+      propertyPath: addForce
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 867f950b8d33439478c654202adc1795, type: 3}
+--- !u!1 &3878838166079918585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7093097182163102425, guid: 867f950b8d33439478c654202adc1795,
+    type: 3}
+  m_PrefabInstance: {fileID: 6321884600877202208}
+  m_PrefabAsset: {fileID: 0}

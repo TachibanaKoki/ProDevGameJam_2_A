@@ -639,20 +639,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7093097182163102424, guid: 867f950b8d33439478c654202adc1795,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7093097182163102425, guid: 867f950b8d33439478c654202adc1795,
         type: 3}
       propertyPath: m_Name
       value: enemy2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070624693079511588, guid: 867f950b8d33439478c654202adc1795,
-        type: 3}
-      propertyPath: addForce
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 867f950b8d33439478c654202adc1795, type: 3}
@@ -726,7 +716,7 @@ PrefabInstance:
     - target: {fileID: 5819889168033642428, guid: a9cdec9aa28a37645816ea77c3de85a9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9cdec9aa28a37645816ea77c3de85a9, type: 3}
@@ -750,7 +740,7 @@ PrefabInstance:
     - target: {fileID: 3878838166558129498, guid: a468ff1002df1c4409ffbf1fe0690b0b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.27
       objectReference: {fileID: 0}
     - target: {fileID: 3878838166558129498, guid: a468ff1002df1c4409ffbf1fe0690b0b,
         type: 3}
