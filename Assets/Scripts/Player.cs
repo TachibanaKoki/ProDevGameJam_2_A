@@ -14,6 +14,10 @@ public class Player : MonoBehaviour
 	Sprite _Kanoke;
 
 	[SerializeField]
+	Transform _Goal;
+
+	[Header("パラメーター")]
+	[SerializeField]
 	float _Speed = 20.0f;
 
 	float _WidthEnd = 2.5f;
@@ -102,7 +106,8 @@ public class Player : MonoBehaviour
 	{
 		if (isclear)
 		{
-			_PlayerObject.transform.DOMoveY(10, 1.0f);
+			DOVirtual.DelayedCall(1.0f, () => { _PlayerObject.transform.DOMoveY(10, 1.0f); });
+			_Goal.DOMoveY(4.1f,1.0f);
 		}
 		else if(_PlayerObject!=null)
 		{

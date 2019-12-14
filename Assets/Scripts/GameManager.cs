@@ -46,7 +46,9 @@ public class GameManager : MonoBehaviour
 				End();
 			}
 		}
-    }
+
+		Score.m_Score = 10000 * (int)(GameParam._CurrentTime / GameParam._PlayTime);
+	}
 
 	public void End()
 	{
@@ -54,15 +56,19 @@ public class GameManager : MonoBehaviour
 		if(GameParam._CurrentTime == GameParam._PlayTime)
 		{
 			_OnGameEnd?.Invoke(true);
+			SoundManager.PlaySE("ending");
+			DOVirtual.DelayedCall(10.0f, () => { SceneManager.LoadSceneAsync(2); });
 		}
 		else
 		{
 			_OnGameEnd?.Invoke(false);
+			SoundManager.PlaySE("tin1");
+			DOVirtual.DelayedCall(2.0f, () => { SceneManager.LoadSceneAsync(2); });
 		}
 
 		_State = State.End;
 
 		Score.m_Score = 10000 * (int)(GameParam._CurrentTime / GameParam._PlayTime);
-		DOVirtual.DelayedCall(1.0f,()=> { SceneManager.LoadSceneAsync(2); });
+
 	}
 }
