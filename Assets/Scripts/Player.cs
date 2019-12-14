@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 		GameManager._OnGameStart += OnGameStart;
 		GameManager._OnGameEnd += OnGameEnd;
 		_PlayerObject.SetActive(false);
-		DOVirtual.DelayedCall(1.0f, () => {
+		DOVirtual.DelayedCall(2.0f, () => {
 			_Start.transform.DOMoveY(-4.5f,1.0f).OnComplete(()=> 
 			{
 				DOVirtual.DelayedCall(0.5f,()=> {

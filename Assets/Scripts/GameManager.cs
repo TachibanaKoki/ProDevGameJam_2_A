@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 		_State = State.Start;
 		GameParam.Init();
 		_Instance = this;
-		DOVirtual.DelayedCall(3.0f, () =>
+		DOVirtual.DelayedCall(4.0f, () =>
 		{
 			_State = State.Play;
 			_OnGameStart?.Invoke();
