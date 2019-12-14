@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 		{
 			_State = State.Play;
 			_OnGameStart?.Invoke();
+			SoundManager.GetBGMSource()?.Play();
 		});
 	}
 
