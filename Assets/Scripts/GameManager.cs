@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 			}
 		}
 
-		Score.m_Score = 10000 * (int)(GameParam._CurrentTime / GameParam._PlayTime);
+		Score.m_Score =(int)( 10000 * (GameParam._CurrentTime / GameParam._PlayTime));
 	}
 
 	public void End()
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
 		_State = State.End;
 
-		Score.m_Score = 10000 * (int)(GameParam._CurrentTime / GameParam._PlayTime);
+		Score.m_Score = (int)(10000 * (GameParam._CurrentTime / GameParam._PlayTime));
 
 	}
 }
