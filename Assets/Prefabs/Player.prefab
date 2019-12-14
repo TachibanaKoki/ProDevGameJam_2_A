@@ -261,7 +261,7 @@ SpriteRenderer:
   m_SortingLayerID: 1068442957
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 433bb00ab1148704197d068a79a2f065, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 905afcd4cfc8c524cb5b26c68a698347, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -545,4 +545,8 @@ MonoBehaviour:
   _Start: {fileID: 593887820}
   _Kanoke: {fileID: 21300000, guid: dab05d605a3d225409c5f5d1bfb3d060, type: 3}
   _Goal: {fileID: 180041880}
+  _Faice: {fileID: 869455363}
+  _Died: {fileID: 21300000, guid: a7dd53abfe083f549ae137b1137e3bd5, type: 3}
+  _Defult: {fileID: 21300000, guid: d8a0ba1ad513c424fbe9762671c51502, type: 3}
+  _Happy: {fileID: 21300000, guid: 433bb00ab1148704197d068a79a2f065, type: 3}
   _Speed: 10

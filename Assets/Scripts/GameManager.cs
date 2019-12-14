@@ -33,7 +33,13 @@ public class GameManager : MonoBehaviour
 		});
 	}
 
-    void Update()
+	private void OnDestroy()
+	{
+		_OnGameStart = null;
+		_OnGameEnd = null;
+	}
+
+	void Update()
     {
 		if(_State == State.Play)
 		{

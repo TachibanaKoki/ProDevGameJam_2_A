@@ -16,6 +16,16 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	Transform _Goal;
 
+	[Header("フェイシャル")]
+	[SerializeField]
+	SpriteRenderer _Faice;
+	[SerializeField]
+	Sprite _Died;
+	[SerializeField]
+	Sprite _Defult;
+	[SerializeField]
+	Sprite _Happy;
+
 	[Header("パラメーター")]
 	[SerializeField]
 	float _Speed = 20.0f;
@@ -26,7 +36,7 @@ public class Player : MonoBehaviour
 	bool _IsPlay = false;
 
 
-	private void Start()
+	private void Awake()
 	{
 		_IsPlay = false;
 		GameManager._OnGameStart += OnGameStart;
@@ -100,6 +110,7 @@ public class Player : MonoBehaviour
 	private void OnGameStart()
 	{
 		_IsPlay = true;
+		_Faice.sprite = _Defult;
 	}
 
 	private void OnGameEnd(bool isclear)
@@ -108,6 +119,7 @@ public class Player : MonoBehaviour
 		{
 			DOVirtual.DelayedCall(1.0f, () => { _PlayerObject.transform.DOMoveY(10, 1.0f); });
 			_Goal.DOMoveY(4.1f,1.0f);
+			_Faice.sprite = _Happy;
 		}
 		else if(_PlayerObject!=null)
 		{
@@ -116,6 +128,7 @@ public class Player : MonoBehaviour
 			{
 				obj.DOFade(0,1.0f);
 			}
+			_Faice.sprite = _Died;
 		}
 		_IsPlay = false;
 	}
