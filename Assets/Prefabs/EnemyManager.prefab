@@ -236,5 +236,13 @@ MonoBehaviour:
   - {fileID: 612833882}
   - {fileID: 366907387}
   - {fileID: 1103341067}
-  enemyList:
+  enemyType: 3
+  enemyType1List:
   - {fileID: 5819889168033642428, guid: a9cdec9aa28a37645816ea77c3de85a9, type: 3}
+  - {fileID: 5819889168033642428, guid: 15885c84f7896b34fb864137e8034b67, type: 3}
+  enemyType2List:
+  - {fileID: 7093097182163102425, guid: 867f950b8d33439478c654202adc1795, type: 3}
+  - {fileID: 7093097182163102425, guid: 3f5b1825735e7c74791b65d9f2e02835, type: 3}
+  enemyType3List:
+  - {fileID: 3878838166079918585, guid: a468ff1002df1c4409ffbf1fe0690b0b, type: 3}
+  - {fileID: 3878838166079918585, guid: 82d504468bf829b4a9f7079d61336ea3, type: 3}
