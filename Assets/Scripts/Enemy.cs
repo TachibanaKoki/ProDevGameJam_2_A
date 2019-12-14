@@ -110,7 +110,7 @@ public class Enemy : MonoBehaviour
             }
             if(nextmove)
             {
-                add_f *=2.0f;
+                add_f *=1.5f;
             }
             setforce = new Vector2 (-add_f,0.0f);
             
@@ -123,7 +123,7 @@ public class Enemy : MonoBehaviour
             }
             if(nextmove)
             {
-                add_f *=2.0f;
+                add_f *=1.5f;
             }
             setforce = new Vector2 (add_f,0.0f);
         }

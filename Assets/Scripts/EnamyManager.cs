@@ -44,6 +44,56 @@ public class EnamyManager : MonoBehaviour
         int _posNO = Random.Range(0,enemyPopPos.Count);
         int _EnemyNo = Random.Range(0,enemyType);
 
+        //あんまりトリッキーなのは最初でないように
+        if(Score.m_Score < 5000)
+        {
+            if(_posNO == 1)
+            {
+                if( 0 == Random.Range(0,6))
+                {
+                    _posNO = 0;
+                }
+            }
+            if(_posNO == 2)
+            {
+                if( 0 == Random.Range(0,4))
+                {
+                    _posNO = 0;
+                }
+            }
+        }
+        else if(Score.m_Score < 3000)
+        {
+            if(_posNO == 1)
+            {
+                if( 0 == Random.Range(0,4))
+                {
+                    _posNO = 0;
+                }
+            }
+            if(_posNO == 2)
+            {
+                if( 0 == Random.Range(0,2))
+                {
+                    _posNO = 0;
+                }
+            }
+        }
+        else if(Score.m_Score < 1500)
+        {
+            if(_posNO == 1)
+            {
+                if( 0 == Random.Range(0,2))
+                {
+                    _posNO = 0;
+                }
+            }
+            if(_posNO == 2)
+            {
+                _posNO = 0;
+            }
+        }
+
         switch(_EnemyNo)
         {
             case 0 :
