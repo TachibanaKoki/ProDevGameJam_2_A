@@ -47,36 +47,8 @@ public class Player : MonoBehaviour
 				_PlayerObject.transform.localPosition = new Vector3(-_WidthEnd, pos.y, pos.z);
 			}
 		}
-		 if(Input.GetKey(KeyCode.UpArrow))
-		{
-			_PlayerObject.transform.Translate(new Vector3(0,_Speed * Time.deltaTime, 0));
-
-			if (_PlayerObject.transform.localPosition.y > _HeightEnd)
-			{
-				Vector3 pos = _PlayerObject.transform.localPosition;
-				_PlayerObject.transform.localPosition = new Vector3(pos.x, _HeightEnd, pos.z);
-			}
-		}
-		 if(Input.GetKey(KeyCode.DownArrow))
-		{
-			_PlayerObject.transform.Translate(new Vector3(0, -_Speed * Time.deltaTime, 0));
-
-			if (_PlayerObject.transform.localPosition.y < -_HeightEnd)
-			{
-				Vector3 pos = _PlayerObject.transform.localPosition;
-				_PlayerObject.transform.localPosition = new Vector3(pos.x, -_HeightEnd, pos.z);
-			}
-		}
 
     }
-
-	private void OnCollisionEnter2D(Collision2D collision)
-	{
-		if(collision.gameObject.tag == "Enemy")
-		{
-			GameManager._Instance.End();
-		}
-	}
 
 	private void OnGameStart()
 	{
