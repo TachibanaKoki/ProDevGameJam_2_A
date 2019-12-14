@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
 
 	private void MoveRight()
 	{
-		_PlayerObject.transform.Translate(new Vector3(_Speed * Time.deltaTime, 0, 0));
+		_PlayerObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(_Speed * Time.deltaTime, 0, 0), ForceMode2D.Impulse);
 
 		if (_PlayerObject.transform.localPosition.x > _WidthEnd)
 		{
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
 
 	private void MoveLeft()
 	{
-		_PlayerObject.transform.Translate(new Vector3(-_Speed * Time.deltaTime, 0, 0));
+		_PlayerObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(-_Speed * Time.deltaTime, 0, 0),ForceMode2D.Impulse);
 
 		if (_PlayerObject.transform.localPosition.x < -_WidthEnd)
 		{
