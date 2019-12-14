@@ -82,7 +82,8 @@ public class Player : MonoBehaviour
 		{
 			MoveLeft();
 		}
-
+		var rig = _PlayerObject.transform.GetComponent<Rigidbody2D>();
+		_PlayerObject.transform.rotation = Quaternion.Euler(0,0,-rig.velocity.x*2);
 	}
 
 	private void MoveRight()
