@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+	public static GameManager _Instance;
+
+	public static System.Action _OnGameStart;
+	public static System.Action<bool> _OnGameEnd;
+
 	public enum State
 	{
 		Start,
@@ -13,27 +18,50 @@ public class GameManager : MonoBehaviour
 		End
 	}
 
-	public State _State = State.Start; 
+	public static State _State = State.Start; 
 
     void Start()
     {
 		_State = State.Start;
 		GameParam.Init();
+		_Instance = this;
+		DOVirtual.DelayedCall(3.0f, () =>
+		{
+			_State = State.Play;
+			_OnGameStart?.Invoke();
+		});
 	}
 
     void Update()
     {
-		DOVirtual.DelayedCall(3.0f,()=> { _State = State.Play; });
-
 		if(_State == State.Play)
 		{
 			GameParam.Update();
 
 			if(GameParam._CurrentTime>= GameParam._PlayTime)
 			{
-				_State = State.End;
-				SceneManager.LoadSceneAsync(2);
+				GameParam._CurrentTime = GameParam._PlayTime;
+
+				End();
 			}
 		}
     }
+
+	public void End()
+	{
+		if (_State == State.End) return;
+		if(GameParam._CurrentTime == GameParam._PlayTime)
+		{
+			_OnGameEnd?.Invoke(true);
+		}
+		else
+		{
+			_OnGameEnd?.Invoke(false);
+		}
+
+		_State = State.End;
+
+		Score.m_Score = 10000 * (int)(GameParam._CurrentTime / GameParam._PlayTime);
+		DOVirtual.DelayedCall(1.0f,()=> { SceneManager.LoadSceneAsync(2); });
+	}
 }

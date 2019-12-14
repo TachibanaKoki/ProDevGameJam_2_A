@@ -174,4 +174,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _PlayerObject: {fileID: 1120035596}
-  _Speed: 20
+  _Speed: 10
