@@ -143,7 +143,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _BGMSource: {fileID: 1119143061533972119}
   _SESource: {fileID: 1119143061533972106}
-  _AudioClips: []
+  _AudioClips:
+  - {fileID: 8300000, guid: 97b8605a7b99b1e46a4d910091a79f77, type: 3}
+  - {fileID: 8300000, guid: ff8f14721da6786489502d56989deaf1, type: 3}
 --- !u!82 &1119143061533972106
 AudioSource:
   m_ObjectHideFlags: 0
