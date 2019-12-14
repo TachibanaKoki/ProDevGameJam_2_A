@@ -12,4 +12,9 @@ public static class GameParam
 	{
 		_CurrentTime = 0;
 	}
+
+	public static  void Update()
+	{
+		_CurrentTime += Time.deltaTime;
+	}
 }

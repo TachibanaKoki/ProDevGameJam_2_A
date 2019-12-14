@@ -7,9 +7,7 @@ public class BackGround : MonoBehaviour
 {
 
 	[SerializeField]
-	Color _StartColor = Color.blue;
-	[SerializeField]
-	Color _EndColor = Color.black;
+	Gradient _Gradient;
 
 
 	[SerializeField]
@@ -21,9 +19,9 @@ public class BackGround : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-		_Image.color = Color.Lerp(_StartColor, _EndColor,GameParam._CurrentTime/GameParam._PlayTime);
+	// Update is called once per frame
+	void Update()
+	{
+		_Image.color = _Gradient.Evaluate(GameParam._CurrentTime / GameParam._PlayTime);
 	}
 }
