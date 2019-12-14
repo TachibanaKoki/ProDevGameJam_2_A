@@ -25,8 +25,17 @@ public class BackGround : MonoBehaviour
 	}
 	private void Clouds()
 	{
-		_Clouds.localPosition = new Vector3(0,3.5f,0);
-		_Clouds.DOMove(new Vector3(14, -6.0f, 0), 10.0f).SetEase(Ease.Linear).onComplete+= Clouds;
+		bool isRight = Random.Range(0,2)==0;
+		if (isRight)
+		{
+			_Clouds.localPosition = new Vector3(1, 3.5f, -0.5f);
+			_Clouds.DOMove(new Vector3(12, -6.0f, -0.5f), 10.0f).SetEase(Ease.Linear).onComplete += Clouds;
+		}
+		else
+		{
+			_Clouds.localPosition = new Vector3(12, 3.5f, -0.5f);
+			_Clouds.DOMove(new Vector3(1, -6.0f, -0.5f), 10.0f).SetEase(Ease.Linear).onComplete += Clouds;
+		}
 	}
 	// Update is called once per frame
 	void Update()
