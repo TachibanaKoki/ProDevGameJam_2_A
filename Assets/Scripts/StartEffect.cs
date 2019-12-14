@@ -25,7 +25,7 @@ public class StartEffect : MonoBehaviour
 		{
 			_YOUAREDEAD.DOFade(0,0.5f);
 			Left.DOLocalMoveX(-1000, 1.0f);
-			Right.DOLocalMoveX(1000, 1.0f);
+			Right.DOLocalMoveX(1000, 1.0f).OnComplete(()=> { SoundManager.PlaySE("Start"); });
 		});
 
 	}
