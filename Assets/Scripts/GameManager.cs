@@ -17,7 +17,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-    }
+		_State = State.Start;
+		GameParam.Init();
+	}
 
     void Update()
     {

@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class BackGround : MonoBehaviour
 {
-
 	[SerializeField]
 	Gradient _Gradient;
 
-
 	[SerializeField]
-	Image _Image;
+	SpriteRenderer _Image;
 
     // Start is called before the first frame update
     void Start()

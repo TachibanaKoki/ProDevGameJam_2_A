@@ -464,81 +464,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key0.g
-      value: 0.86376
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key0.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key0.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key1.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key1.g
-      value: 0.94680476
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key1.b
-      value: 0.4481132
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key1.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key0.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key2.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key2.g
-      value: 0.6933962
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.key2.b
-      value: 0.8793225
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.ctime1
-      value: 25829
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.ctime2
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 917758429066045274, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
-        type: 3}
-      propertyPath: _Gradient.m_NumColorKeys
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4358270094111365281, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -552,7 +477,7 @@ PrefabInstance:
     - target: {fileID: 4358270094111365281, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4358270094111365281, guid: ec5f6b7d3a8f5cc498c640a2f5c431c7,
         type: 3}
