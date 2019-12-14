@@ -85,6 +85,13 @@ public class EnamyManager : MonoBehaviour
             _sam_EnemyNo = Random.Range(0,enemyType);
             _posNO2 = Random.Range(0,enemyPopPos.Count);
 
+            if(_EnemyNo > 0 )
+            {
+                if(_sam_EnemyNo > 0)
+                {
+                    _sam_EnemyNo = 0;
+                }
+            }
             if(_posNO2 == _posNO)
             {
                 if(_posNO2 == 5)
