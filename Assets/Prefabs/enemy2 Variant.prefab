@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 5713534156479795009, guid: a9cdec9aa28a37645816ea77c3de85a9,
         type: 3}
       propertyPath: addForce
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5819889167421578015, guid: a9cdec9aa28a37645816ea77c3de85a9,
         type: 3}
@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 5819889168033642428, guid: a9cdec9aa28a37645816ea77c3de85a9,
         type: 3}
       propertyPath: m_Name
-      value: enemy2
+      value: enemy2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5819889168033642430, guid: a9cdec9aa28a37645816ea77c3de85a9,
         type: 3}

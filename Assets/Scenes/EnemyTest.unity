@@ -801,23 +801,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6670562328913591350, guid: d7e1692d1981aad4aa1d9612625f9b58,
-        type: 3}
-      propertyPath: enemyList.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6670562328913591350, guid: d7e1692d1981aad4aa1d9612625f9b58,
-        type: 3}
-      propertyPath: enemyList.Array.data[1]
-      value: 
-      objectReference: {fileID: 7093097182163102425, guid: 867f950b8d33439478c654202adc1795,
-        type: 3}
-    - target: {fileID: 6670562328913591350, guid: d7e1692d1981aad4aa1d9612625f9b58,
-        type: 3}
-      propertyPath: enemyList.Array.data[2]
-      value: 
-      objectReference: {fileID: 3878838166079918585, guid: a468ff1002df1c4409ffbf1fe0690b0b,
-        type: 3}
     - target: {fileID: 8855554918424100245, guid: d7e1692d1981aad4aa1d9612625f9b58,
         type: 3}
       propertyPath: m_LocalPosition.x

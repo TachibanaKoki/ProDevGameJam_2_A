@@ -18,7 +18,7 @@ public class EnamyManager : MonoBehaviour
     public List<GameObject> enemyType2List;
     public List<GameObject> enemyType3List;
 
-    public float enemyPopTime = 4.0f;
+    public float enemyPopTime = 3.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -44,55 +44,61 @@ public class EnamyManager : MonoBehaviour
         int _posNO = Random.Range(0,enemyPopPos.Count);
         int _EnemyNo = Random.Range(0,enemyType);
 
+        int _sam_EnemyNo = -1;
+        int _posNO2 = -1;
         //あんまりトリッキーなのは最初でないように
-        if(Score.m_Score < 5000)
+        if(Score.m_Score <= 2000)
         {
-            if(_posNO == 1)
-            {
-                if( 0 == Random.Range(0,6))
-                {
-                    _posNO = 0;
-                }
-            }
-            if(_posNO == 2)
-            {
-                if( 0 == Random.Range(0,4))
-                {
-                    _posNO = 0;
-                }
-            }
-        }
-        else if(Score.m_Score < 3000)
-        {
-            if(_posNO == 1)
-            {
-                if( 0 == Random.Range(0,4))
-                {
-                    _posNO = 0;
-                }
-            }
-            if(_posNO == 2)
+            if(_EnemyNo == 1)
             {
                 if( 0 == Random.Range(0,2))
                 {
-                    _posNO = 0;
+                    _EnemyNo = 0;
                 }
             }
+            if(_EnemyNo == 2)
+            {
+                _EnemyNo = 0;
+            }
         }
-        else if(Score.m_Score < 1500)
+        else if(Score.m_Score < 5000)
         {
-            if(_posNO == 1)
+            if(_EnemyNo == 1)
+            {
+                if( 0 == Random.Range(0,4))
+                {
+                    _EnemyNo = 0;
+                }
+            }
+            if(_EnemyNo == 2)
             {
                 if( 0 == Random.Range(0,2))
                 {
-                    _posNO = 0;
+                    _EnemyNo = 0;
                 }
             }
-            if(_posNO == 2)
-            {
-                _posNO = 0;
-            }
         }
+        
+        else
+        {
+
+            _sam_EnemyNo = Random.Range(0,enemyType);
+            _posNO2 = Random.Range(0,enemyPopPos.Count);
+
+            if(_posNO2 == _posNO)
+            {
+                if(_posNO2 == 5)
+                {
+                    _posNO2 = 0;
+                }
+                else 
+                {
+                    _posNO2++;
+                }
+            }
+
+        }
+        
 
         switch(_EnemyNo)
         {
@@ -109,6 +115,22 @@ public class EnamyManager : MonoBehaviour
                 CreateType1(_posNO);
                 break;
         }
+        //同時だし
+        switch(_sam_EnemyNo)
+        {
+            case 0 :
+                CreateType1(_posNO2);
+                break;
+            case 1 :
+                CreateType2(_posNO2);
+                break;
+            case 2 :
+                CreateType3(_posNO2);
+                break;
+            default :
+
+                break;
+        }
         
         if(Score.m_Score > 7000)
         {
@@ -116,15 +138,15 @@ public class EnamyManager : MonoBehaviour
         }
         else if(Score.m_Score > 5000)
         {
-            enemyPopTime = 2.5f;
+            enemyPopTime = 2.2f;
         }
         else if(Score.m_Score > 3000)
         {
-            enemyPopTime = 3.0f;
+            enemyPopTime = 2.5f;
         }
         else if(Score.m_Score > 1500)
         {
-            enemyPopTime = 3.5f;
+            enemyPopTime = 2.8f;
         }
 
     }
